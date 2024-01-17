@@ -80,8 +80,7 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const baseUrl = (`https://${process.env.VERCEL_URL}` ||
-    "http://localhost:3000") as string;
+  const baseUrl = "https://dato-next-test-seven.vercel.app"
 
   const { body } = await got(new URL(permalink, baseUrl).toString());
 
